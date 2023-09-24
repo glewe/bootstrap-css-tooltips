@@ -34,7 +34,7 @@ can be easily set by a class name:
 
 ## Usage
 
-The library requires that you use the Bootstrap framework styles. You need to load the stylesheet first because the bsv-tooltips stylesheet refers to color variables from there..
+The library requires that you use the Bootstrap framework styles. You need to load the stylesheet first because the bsc-tooltips stylesheet refers to color variables from there..
 
 After that, load the stylesheet from this library. 
 
