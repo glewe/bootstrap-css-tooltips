@@ -30,7 +30,7 @@ can be easily set by a class name:
 
 ## Demo
 
-Download the library, unpack and load the index.html file in your browser.
+[http://demo.lewe-online.de/bootstrap-css-tooltips/](http://demo.lewe-online.de/bootstrap-css-tooltips/)
 
 ## Usage
 
