@@ -1,0 +1,59 @@
+{
+  "name": "bootstrap-css-tooltips",
+  "description": "Bootstrap CSS tooltips are based on CSS only and support HTML content and Bootstrap colors.",
+  "version": "1.1.0",
+  "license": "MIT",
+  "author": "George Lewe <https://lewe.com>",
+  "scripts": {
+    "css": "npm-run-all css-compile css-prefix css-rtl css-minify",
+    "css-compile": "sass --style expanded --load-path=\"node_modules\" --source-map --embed-sources --no-error-css src/scss/:dist/css/",
+    "css-rtl": "cross-env NODE_ENV=RTL postcss --config src/config/postcss.config.mjs --dir \"dist/css\" --ext \".rtl.css\" \"dist/css/*.css\" \"!dist/css/*.min.css\" \"!dist/css/*.rtl.css\"",
+    "css-lint": "stylelint \"src/scss/**/*.scss\" --cache --cache-location .cache/.stylelintcache --rd",
+    "css-minify": "npm-run-all --aggregate-output --parallel css-minify-*",
+    "css-minify-main": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/ --batch --batch-suffix \".min\" \"dist/css/*.css\" \"!dist/css/*.min.css\" \"!dist/css/*rtl*.css\"",
+    "css-minify-rtl": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/ --batch --batch-suffix \".min\" \"dist/css/*rtl.css\" \"!dist/css/*.min.css\"",
+    "css-prefix": "postcss --config src/config/postcss.config.mjs --replace \"dist/css/*.css\" \"!dist/css/*.rtl*.css\" \"!dist/css/*.min.css\"",
+    "lockfile-lint": "lockfile-lint --allowed-hosts npm --allowed-schemes https: --empty-hostname false --type npm --path package-lock.json",
+    "html": "node src/config/html.config.mjs",
+    "docs-format": "js-beautify --editorconfig --file \"dist/*.html\"",
+    "assets": "node src/config/assets.config.mjs",
+    "lint": "npm-run-all --aggregate-output --continue-on-error --parallel css-lint lockfile-lint",
+    "compile": "npm-run-all html docs-format assets css",
+    "prod": "npm-run-all lint compile"
+  },
+  "keywords": [
+    "css",
+    "responsive",
+    "bootstrap",
+    "template",
+    "theme",
+    "framework",
+    "tooltip"
+  ],
+  "homepage": "https://lewe.com",
+  "style": "dist/css/bsc-tooltips.css",
+  "sass": "src/scss/bsc-tooltips.scss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glewe/bootstrap-css-tooltips"
+  },
+  "bugs": {
+    "url": "https://github.com/glewe/bootstrap-css-tooltips/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.10.5",
+    "clean-css-cli": "^5.6.2",
+    "cross-env": "^7.0.3",
+    "js-beautify": "^1.14.9",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.29",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^3.0.3",
+    "rtlcss": "^4.1.0",
+    "sass": "^1.67.0",
+    "stylelint": "^15.10.3",
+    "stylelint-config-twbs-bootstrap": "^11.0.1"
+  }
+}
