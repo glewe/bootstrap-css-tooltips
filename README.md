@@ -1,7 +1,8 @@
 # Bootstrap CSS Tooltips
 
-[![Bootstrap 5](https://img.shields.io/badge/Framework-Bootstrap%205-7952b3.svg)](https://www.getbootstrap.com/)
-[![Bootstrap Icons](https://img.shields.io/badge/Styles-CSS-2b69a3.svg)](https://icons.getbootstrap.com/)
+[![Bootstrap 5](https://img.shields.io/badge/Bootstrap%205-7952b3.svg)](https://www.getbootstrap.com/)
+[![SCSS](https://img.shields.io/badge/SCSS-c46c98.svg)](https://sass-lang.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-6eaa51.svg)](https://nodejs.org/en/)
 
 **Bootstrap CSS Tooltips** offers a CSS only tooltip solution supporting Bootstrap colors and HTML content.
 
@@ -32,11 +33,15 @@ can be easily set by a class name:
 
 [http://demo.lewe-online.de/bootstrap-css-tooltips/](http://demo.lewe-online.de/bootstrap-css-tooltips/)
 
+or
+
+Download the library here and launch `index.html` from the `dist` folder.
+
 ## Usage
 
-The library requires that you use the Bootstrap framework styles. You need to load the stylesheet first because the bsc-tooltips stylesheet refers to color variables from there..
+The library requires that you use Bootstrap 5 on your site. You need to load the BS5 stylesheet first.
 
-After that, load the stylesheet from this library. 
+After that, load the stylesheet from this library's `dist/css` folder. 
 
 For example:
 
@@ -45,7 +50,7 @@ For example:
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <!--end::Bootstrap Styles-->
 <!--begin::Bootstrap CSS Tooltips-->
-<link href="bsc-tooltips.css" rel="stylesheet">
+<link href="css/bsc-tooltips.min.css" rel="stylesheet">
 <!--end::Bootstrap CSS Tooltips-->
 ```
 In your HTML code you need a DOM object that holds the hover object and the tooltip object. The tooltip object is intially hidden. 
@@ -113,6 +118,31 @@ An xlarge tooltip popping up at the bottom containing a left floating image with
 </div>
 
 ```
+## Customization
+
+If you want to make changes to the library, clone the repo like so:
+
+```
+git clone https://github.com/glewe/bootstrap-css-tooltips.git
+```
+
+Then install the dependencies by running
+```
+npm install
+```
+
+Edit the `src/html/index.html` and `src/scss/bs-tooltips.scss` file to your liking.
+
+Compile the result of your changes by running:
+
+```
+npm run compile
+```
+
+The distribution files will be created in the `dist` folder. Launch the `index.html` in there and review your changes.
+
+## Enjoy
+
 If you have use for this library, feel free to use it anywhere for free.
 
 If you encounter problems or have ideas for improvement, go ahead and open an issue here at GitHub.
