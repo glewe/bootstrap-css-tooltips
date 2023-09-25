@@ -1,7 +1,8 @@
 # Bootstrap CSS Tooltips
 
 [![Bootstrap 5](https://img.shields.io/badge/Bootstrap%205-7952b3.svg)](https://www.getbootstrap.com/)
-[![Bootstrap Icons](https://img.shields.io/badge/CSS-2b69a3.svg)](https://icons.getbootstrap.com/)
+[![SCSS](https://img.shields.io/badge/SCSS-c46c98.svg)](https://sass-lang.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-6eaa51.svg)](https://nodejs.org/en/)
 
 **Bootstrap CSS Tooltips** offers a CSS only tooltip solution supporting Bootstrap colors and HTML content.
 
