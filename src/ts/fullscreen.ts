@@ -5,7 +5,7 @@
  * ----------------------------------------------------------------------------
  */
 
-import { onDOMContentLoaded } from './util/index'
+import { onDOMContentLoaded } from './util'
 
 /**
  * Constants
