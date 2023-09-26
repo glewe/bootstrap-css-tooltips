@@ -6,7 +6,7 @@
 
 **Bootstrap CSS Tooltips** offers a CSS only tooltip solution supporting Bootstrap colors and HTML content.
 
-Bootstrap itself comes with basic black tooltips that require Javascript (popper.js) and do not support HTML content. 
+Bootstrap itself comes with basic black tooltips that require Javascript (popper.js) and do not support complex HTML content. 
 I ran into situations where those didn't work, e.g. when the tooltip content is injected via Javascript after the page is loaded.
 In such cases, CSS based tooltips still work well.
 
@@ -53,7 +53,7 @@ For example:
 <link href="css/bsc-tooltips.min.css" rel="stylesheet">
 <!--end::Bootstrap CSS Tooltips-->
 ```
-In your HTML code you need a DOM object that holds the hover object and the tooltip object. The tooltip object is intially hidden. 
+In your HTML code you need a DOM object that holds the hover object and the tooltip content object. The tooltip content object is intially hidden. 
 
 For example:
 
@@ -63,12 +63,11 @@ For example:
   <span class="bsc-tooltip-content danger top">Tooltip Text</span>
 </div>
 ```
-In the above example, a Bootstrap button in color 'danger' is created saying "Top tooltip". When hovering over it with your mouse, 
-the tooltip DOM object (span element) will be displayed on top of the button.
+In the above example, hovering the Bootstrap button will show a 'danger' colored tooltip at the 'top'.
 
 Here are two more complex examples:
 
-A large tooltip showing to the right with a table in it:
+A large dark tooltip showing to the right with a table in it:
 ```html
 <div class="btn btn-dark bsc-tooltip">Right large tooltip
   <div class="bsc-tooltip-content dark right large">
@@ -99,7 +98,7 @@ A large tooltip showing to the right with a table in it:
   </div>
 </div>
 ```
-An xlarge tooltip popping up at the bottom containing a left floating image with text next to it:
+An xlarge info tooltip popping up at the bottom containing a left floating image with text next to it:
 ```html
 <div class="btn btn-info bsc-tooltip m-2">Bottom xlarge tooltip
   <div class="bsc-tooltip-content info bottom xlarge">
