@@ -1,8 +1,9 @@
 import fs from 'fs-extra'
 
+console.log('-------------------------------------------------------------------------------\nCopying asset files...\n')
 try {
   fs.copySync('./src/assets/img', './dist/img')
-  console.log('Assets copy success!')
+  console.log('...done!\n-------------------------------------------------------------------------------')
 } catch (error) {
-  console.error(error)
+  console.error(error + '\n-------------------------------------------------------------------------------')
 }

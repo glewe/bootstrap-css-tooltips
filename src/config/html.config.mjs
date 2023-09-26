@@ -1,8 +1,9 @@
 import fs from 'fs-extra'
 
+console.log('-------------------------------------------------------------------------------\nCopying HTML files...\n')
 try {
   fs.copySync('./src/html', './dist')
-  console.log('HTML copy success!')
+  console.log('...done!\n-------------------------------------------------------------------------------')
 } catch (error) {
-  console.error(error)
+  console.error(error + '\n-------------------------------------------------------------------------------')
 }

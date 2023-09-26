@@ -2,8 +2,9 @@
   "name": "bootstrap-css-tooltips",
   "description": "Bootstrap CSS tooltips are based on CSS only and support HTML content and Bootstrap colors.",
   "version": "1.1.0",
-  "license": "MIT",
-  "author": "George Lewe <https://lewe.com>",
+  "license": "MIT <https://github.com/glewe/bootstrap-css-tooltips/blob/master/LICENSE>",
+  "author": "George Lewe",
+  "homepage": "https://lewe.com",
   "scripts": {
     "css": "npm-run-all css-compile css-prefix css-rtl css-minify",
     "css-compile": "sass --style expanded --load-path=\"node_modules\" --source-map --embed-sources --no-error-css src/scss/:dist/css/",
@@ -23,7 +24,7 @@
     "assets": "node src/config/assets.config.mjs",
     "scss": "node src/config/scss.config.mjs",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel css-lint lockfile-lint",
-    "compile": "npm-run-all html docs-format scss assets css js",
+    "compile": "npm-run-all docs-format scss assets html css js",
     "prod": "npm-run-all compile"
   },
   "keywords": [
@@ -35,7 +36,6 @@
     "framework",
     "tooltip"
   ],
-  "homepage": "https://lewe.com",
   "style": "dist/css/bsc-tooltips.css",
   "sass": "src/scss/bsc-tooltips.scss",
   "repository": {

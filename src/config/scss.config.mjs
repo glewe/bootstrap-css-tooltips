@@ -1,5 +1,6 @@
 import fs from 'fs-extra'
-import pkg from '../../package.json' assert { type: "json" };
+const version = process.env.npm_package_version;
+const year = new Date().getFullYear()
 
 var lastCompile = new Date();
 //
@@ -17,16 +18,10 @@ lastCompile =
 //
 // Create timestamp file to import in .scss files
 //
+console.log('-------------------------------------------------------------------------------\nCreating _timestamp.scss...\n')
 try {
-  fs.writeFile('./src/scss/_timestamp.scss', "$compileTimestamp: \"" + lastCompile + "\"\n")
-  console.log('_timestamp.scss created!')
+  fs.writeFile('./src/scss/_timestamp.scss', "$version: \"" + version + "\";\n" + '$timestamp: "' + lastCompile + '";\n' + '$year: "' + year + '";')
+  console.log('...done!\n-------------------------------------------------------------------------------')
 } catch (error) {
-  console.error(error)
-}
-
-try {
-  fs.appendFile('./src/scss/_timestamp.scss', '$pkgVersion: v"' + pkg.version + '"')
-  console.log('_timestamp.scss appended!')
-} catch (error) {
-  console.error(error)
+  console.error(error + '\n-------------------------------------------------------------------------------')
 }
