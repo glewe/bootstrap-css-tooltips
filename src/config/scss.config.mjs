@@ -1,4 +1,5 @@
 import fs from 'fs-extra'
+import pkg from '../../package.json' assert { type: "json" };
 
 var lastCompile = new Date();
 //
@@ -17,8 +18,15 @@ lastCompile =
 // Create timestamp file to import in .scss files
 //
 try {
-  fs.writeFile('./src/scss/_timestamp.scss', '$compileTimestamp: "' + lastCompile + '"')
+  fs.writeFile('./src/scss/_timestamp.scss', "$compileTimestamp: \"" + lastCompile + "\"\n")
   console.log('_timestamp.scss created!')
+} catch (error) {
+  console.error(error)
+}
+
+try {
+  fs.appendFile('./src/scss/_timestamp.scss', '$pkgVersion: v"' + pkg.version + '"')
+  console.log('_timestamp.scss appended!')
 } catch (error) {
   console.error(error)
 }
