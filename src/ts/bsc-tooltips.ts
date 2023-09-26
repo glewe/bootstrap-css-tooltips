@@ -1,5 +1,4 @@
-import FullScreen from './fullscreen'
-
-export {
-  FullScreen
-}
+// ============================================================================
+/**
+ * bsc-tooltips.ts
+ */
