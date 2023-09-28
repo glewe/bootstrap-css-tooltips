@@ -1,151 +1,58 @@
-# Bootstrap CSS Tooltips
+# [AdminLTE - Bootstrap 5 Admin Dashboard](https://adminlte.io)
 
-[![Bootstrap 5](https://img.shields.io/badge/Bootstrap%205-7952b3.svg)](https://www.getbootstrap.com/)
-[![SCSS](https://img.shields.io/badge/SCSS-c46c98.svg)](https://sass-lang.com/)
-[![Node.js](https://img.shields.io/badge/Node.js-6eaa51.svg)](https://nodejs.org/en/)
+[![npm version](https://img.shields.io/npm/v/admin-lte/latest.svg)](https://www.npmjs.com/package/admin-lte)
+[![Packagist](https://img.shields.io/packagist/v/almasaeed2010/adminlte.svg)](https://packagist.org/packages/almasaeed2010/adminlte)
+[![cdn version](https://data.jsdelivr.com/v1/package/npm/admin-lte/badge)](https://www.jsdelivr.com/package/npm/admin-lte)
+[![Discord Invite](https://img.shields.io/badge/discord-join%20now-green)](https://discord.gg/jfdvjwFqfz)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1277b36b-08f3-43fa-826a-4b4d24614b3c/deploy-status)](https://app.netlify.com/sites/adminlte-v4/deploys)
 
-**Bootstrap CSS Tooltips** offers a CSS only tooltip solution supporting Bootstrap colors and HTML content.
+**AdminLTE** is a fully responsive administration template. Based on **[Bootstrap 5](https://getbootstrap.com/)** framework and also the JavaScript plugins.
+Highly customizable and easy to use. Fits many screen resolutions from small mobile devices to large desktops.
 
-Bootstrap itself comes with basic black tooltips that require Javascript (popper.js) and do not support complex HTML content. 
-I ran into situations where those didn't work, e.g. when the tooltip content is injected via Javascript after the page is loaded.
-In such cases, CSS based tooltips still work well.
+## Looking for Premium Templates?
 
-On my search for a CSS based tooltip library I did not find one that fulfilled all my requirements, thus, I wrote this one here to serve my specific use cases.
+AdminLTE.io just opened a new premium templates page. Hand picked to ensure the best quality and the most affordable
+prices. Visit <https://adminlte.io/premium> for more information.
 
-## My Requirements
+!["AdminLTE Presentation"](https://adminlte.io/AdminLTE3.png "AdminLTE Presentation")
 
-- no Javascript required
-- support for HTML content
-- support for Bootstrap colors
-- support for positioning top, right, bottom and left
+**AdminLTE** has been carefully coded with clear comments in all of its JS, SCSS and HTML files.
+SCSS has been used to increase code customizability.
 
-The downside of not having Javascript create the tooltips is not having the automatic computation of the tooltip size and position based on canvas and hover object position.
+## Quick start
 
-To work around this I chose to position the tooltips relatively to the hover object based on pixel distances. For horizontal sizing, this library offers four different widths. They 
-can be easily set by a class name:
+### Compile dist files
 
-- small: 160px
-- medium: 240px
-- large: 320px
-- xlarge: 400px
+To compile the dist files you need Node.js/npm, clone/download the repo then:
 
-## Demo
+1. `npm install` (install npm deps)
+2. _Optional:_ `npm run dev` (developer mode, autocompile with browsersync support for live demo)
+3. `npm run production` (compile css/js files)
 
-[http://demo.lewe-online.de/bootstrap-css-tooltips/](http://demo.lewe-online.de/bootstrap-css-tooltips/)
 
-or
+## Contributing
 
-Download the library here and launch `index.html` from the `dist` folder.
+- Highly welcome.
+- For your extra reference check [AdminLTE v4 Contribution Guide](https://github.com/ColorlibHQ/AdminLTE#contributing)
+- First thing first, you should have bit knowledge about NodeJS.
+- Github Knowledge.
+- Install NodeJS LTS version.
+- Clone this Repository to your machine and change to `master` branch.
+- Go to Cloned Folder.
+- In cli/bash run `npm install` it will install dependency from `package.json`.
+- After installation complets, run `npm run dev`
+- Cool, Send urs changes in PR to `master` branch.
 
-## Usage
 
-The library requires that you use Bootstrap 5 on your site. You need to load the BS5 stylesheet first.
+## License
 
-After that, load the stylesheet from this library's `dist/css` folder. 
+AdminLTE is an open source project by [AdminLTE.io](https://adminlte.io) that is licensed under [MIT](https://opensource.org/licenses/MIT).
+AdminLTE.io reserves the right to change the license of future releases.
 
-For example:
+## Image Credits
 
-```html
-<!--begin::Bootstrap Styles-->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<!--end::Bootstrap Styles-->
-<!--begin::Bootstrap CSS Tooltips-->
-<link href="css/bsc-tooltips.min.css" rel="stylesheet">
-<!--end::Bootstrap CSS Tooltips-->
-```
-In your HTML code you need a DOM object that holds the hover object and the tooltip content object. The tooltip content object is intially hidden. 
-
-For example:
-
-```html
-<div class="btn btn-danger bsc-tooltip m-2">
-  Top tooltip
-  <span class="bsc-tooltip-content danger top">Tooltip Text</span>
-</div>
-```
-In the above example, hovering the Bootstrap button will show a 'danger' colored tooltip at the 'top'.
-
-Here are two more complex examples:
-
-A large dark tooltip showing to the right with a table in it:
-```html
-<div class="btn btn-dark bsc-tooltip">Right large tooltip
-  <div class="bsc-tooltip-content dark right large">
-    <div class="row">
-      <div class="col-5">Build Job:</div>
-      <div class="col-7">my-app (815)</div>
-    </div>
-    <div class="row">
-      <div class="col-5">Build Type:</div>
-      <div class="col-7">Production</div>
-    </div>
-    <div class="row">
-      <div class="col-5">Version:</div>
-      <div class="col-7">v2.4.3</div>
-    </div>
-    <div class="row">
-      <div class="col-5">Branch:</div>
-      <div class="col-7">master</div>
-    </div>
-    <div class="row">
-      <div class="col-5">Build Time:</div>
-      <div class="col-7">2023-09-24 15:06</div>
-    </div>
-    <div class="row">
-      <div class="col-5">Duration:</div>
-      <div class="col-7">00:12:45</div>
-    </div>
-  </div>
-</div>
-```
-An xlarge info tooltip popping up at the bottom containing a left floating image with text next to it:
-```html
-<div class="btn btn-info bsc-tooltip m-2">Bottom xlarge tooltip
-  <div class="bsc-tooltip-content info bottom xlarge">
-    <p>
-      <img 
-        src="duelmen.jpg" 
-        style="float: left; margin-right: 8px; width: 100px;" 
-        alt=""
-      >
-      Dülmen is a twon in Germany. It is situated in the south part of the Münsterland area, 
-      between the Lippe river to the south, the Baumberge hills to the north and the Ems 
-      river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a 
-      traditional cole mining area.
-    </p>
-  </div>
-</div>
-
-```
-## Customization
-
-If you want to make changes to the library, clone the repo like so:
-
-```
-git clone https://github.com/glewe/bootstrap-css-tooltips.git
-```
-
-Then install the dependencies by running
-```
-npm install
-```
-
-Edit the `src/html/index.html` and `src/scss/bs-tooltips.scss` file to your liking.
-
-Compile the result of your changes by running:
-
-```
-npm run compile
-```
-
-The distribution files will be created in the `dist` folder. Launch the `index.html` in there and review your changes.
-
-## Enjoy
-
-If you have use for this library, feel free to use it anywhere for free.
-
-If you encounter problems or have ideas for improvement, go ahead and open an issue here at GitHub.
-
-Enjoy and best regards,
-
-George
+- [Pixeden](http://www.pixeden.com/psd-web-elements/flat-responsive-showcase-psd)
+- [Graphicsfuel](https://www.graphicsfuel.com/2013/02/13-high-resolution-blur-backgrounds/)
+- [Pickaface](https://pickaface.net/)
+- [Unsplash](https://unsplash.com/)
+- [Uifaces](http://uifaces.com/)

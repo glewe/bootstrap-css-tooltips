@@ -1,0 +1,359 @@
+---
+import Head from "@components/_head.astro";
+import Scripts from "@components/_scripts.astro";
+
+const title = "Bootstrap CSS Tooltips";
+const path = "../../dist";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<!--begin::Head-->
+<head>
+  <Head title={title} path={path}/>
+</head>
+<!--end::Head-->
+<!--begin::Body-->
+<body>
+<div class="content m-4">
+  <!--begin::Card-->
+  <div class="card card-primary card-outline mb-4">
+    <!--begin::Card Header-->
+    <div class="card-header">
+      <h5 class="card-title">Bootstrap CSS Tooltips</h5>
+      <p>Bootstrap CSS tooltips are based on CSS only. No Javascript is needed. Hover over the buttons below to see examples.</p>
+      <p>View on <a href="https://github.com/glewe/bootstrap-css-tooltips" target="_blank">GitHub</a></p>
+    </div>
+    <!--end::Card Header-->
+    <!--begin::Card Body-->
+    <div class="card-body">
+      <h6>Regular Size (same as 'small')</h6>
+      <div class="btn btn-danger bsc-tooltip m-2">Top small tooltip
+        <span class="bsc-tooltip-content danger top">Tooltip Text</span>
+      </div>
+      <div class="btn btn-dark bsc-tooltip">Right small tooltip
+        <span class="bsc-tooltip-content dark right">Tooltip Text</span>
+      </div>
+      <div class="btn btn-info bsc-tooltip m-2">Bottom small tooltip
+        <span class="bsc-tooltip-content info bottom">Tooltip Text</span>
+      </div>
+      <div class="btn btn-light bsc-tooltip m-2">Left small tooltip
+        <span class="bsc-tooltip-content light left">Tooltip Text</span>
+      </div>
+      <div class="btn btn-primary bsc-tooltip m-2">Top small tooltip
+        <span class="bsc-tooltip-content primary top">Tooltip Text</span>
+      </div>
+      <div class="btn btn-secondary bsc-tooltip m-2">Right small tooltip
+        <span class="bsc-tooltip-content secondary right">Tooltip Text</span>
+      </div>
+      <div class="btn btn-success bsc-tooltip">Bottom small tooltip
+        <span class="bsc-tooltip-content success bottom">Tooltip Text</span>
+      </div>
+      <div class="btn btn-warning bsc-tooltip">Left small tooltip
+        <span class="bsc-tooltip-content warning left">Tooltip Text</span>
+      </div>
+      <hr>
+      <h6>Medium Size</h6>
+      <div class="btn btn-danger bsc-tooltip m-2">Top medium tooltip
+        <span class="bsc-tooltip-content danger top medium">Bootstrap 5 is increasingly making use of custom properties as local variables for various components.</span>
+      </div>
+      <div class="btn btn-dark bsc-tooltip">Right medium tooltip
+        <span class="bsc-tooltip-content dark right medium">Bootstrap 5 is increasingly making use of custom properties as local variables for various components.</span>
+      </div>
+      <div class="btn btn-info bsc-tooltip">Bottom medium tooltip
+        <span class="bsc-tooltip-content info bottom medium">Bootstrap 5 is increasingly making use of custom properties as local variables for various components.</span>
+      </div>
+      <div class="btn btn-light bsc-tooltip">Left medium tooltip
+        <span class="bsc-tooltip-content light left medium">Bootstrap 5 is increasingly making use of custom properties as local variables for various components.</span>
+      </div>
+      <div class="btn btn-primary bsc-tooltip">Top medium tooltip
+        <span class="bsc-tooltip-content primary top medium">Bootstrap 5 is increasingly making use of custom properties as local variables for various components.</span>
+      </div>
+      <div class="btn btn-secondary bsc-tooltip">Right medium tooltip
+        <span class="bsc-tooltip-content secondary right medium">Bootstrap 5 is increasingly making use of custom properties as local variables for various components.</span>
+      </div>
+      <div class="btn btn-success bsc-tooltip">Bottom medium tooltip
+        <span class="bsc-tooltip-content success bottom medium">Bootstrap 5 is increasingly making use of custom properties as local variables for various components.</span>
+      </div>
+      <div class="btn btn-warning bsc-tooltip">Left medium tooltip
+        <span class="bsc-tooltip-content warning left medium">Bootstrap 5 is increasingly making use of custom properties as local variables for various components.</span>
+      </div>
+      <hr>
+      <h6>Large Size</h6>
+      <div class="btn btn-danger bsc-tooltip m-2">Top large tooltip
+        <div class="bsc-tooltip-content danger top large">
+          <div class="row">
+            <div class="col-5">Build Job:</div>
+            <div class="col-7">my-app (815)</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Build Type:</div>
+            <div class="col-7">Production</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Version:</div>
+            <div class="col-7">v.2.4.3</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Branch:</div>
+            <div class="col-7">master</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Build Time:</div>
+            <div class="col-7">2023-09-24 15:06</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Duration:</div>
+            <div class="col-7">00:12:45</div>
+          </div>
+        </div>
+      </div>
+      <div class="btn btn-dark bsc-tooltip">Right large tooltip
+        <div class="bsc-tooltip-content dark right large">
+          <div class="row">
+            <div class="col-5">Build Job:</div>
+            <div class="col-7">my-app (815)</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Build Type:</div>
+            <div class="col-7">Production</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Version:</div>
+            <div class="col-7">v.2.4.3</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Branch:</div>
+            <div class="col-7">master</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Build Time:</div>
+            <div class="col-7">2023-09-24 15:06</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Duration:</div>
+            <div class="col-7">00:12:45</div>
+          </div>
+        </div>
+      </div>
+      <div class="btn btn-info bsc-tooltip">Bottom large tooltip
+        <div class="bsc-tooltip-content info bottom large">
+          <div class="row">
+            <div class="col-5">Build Job:</div>
+            <div class="col-7">my-app (815)</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Build Type:</div>
+            <div class="col-7">Production</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Version:</div>
+            <div class="col-7">v.2.4.3</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Branch:</div>
+            <div class="col-7">master</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Build Time:</div>
+            <div class="col-7">2023-09-24 15:06</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Duration:</div>
+            <div class="col-7">00:12:45</div>
+          </div>
+        </div>
+      </div>
+      <div class="btn btn-light bsc-tooltip">Left large tooltip
+        <div class="bsc-tooltip-content light left large">
+          <div class="row">
+            <div class="col-5">Build Job:</div>
+            <div class="col-7">my-app (815)</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Build Type:</div>
+            <div class="col-7">Production</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Version:</div>
+            <div class="col-7">v.2.4.3</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Branch:</div>
+            <div class="col-7">master</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Build Time:</div>
+            <div class="col-7">2023-09-24 15:06</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Duration:</div>
+            <div class="col-7">00:12:45</div>
+          </div>
+        </div>
+      </div>
+      <div class="btn btn-primary bsc-tooltip">Top large tooltip
+        <div class="bsc-tooltip-content primary top large">
+          <div class="row">
+            <div class="col-5">Build Job:</div>
+            <div class="col-7">my-app (815)</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Build Type:</div>
+            <div class="col-7">Production</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Version:</div>
+            <div class="col-7">v.2.4.3</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Branch:</div>
+            <div class="col-7">master</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Build Time:</div>
+            <div class="col-7">2023-09-24 15:06</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Duration:</div>
+            <div class="col-7">00:12:45</div>
+          </div>
+        </div>
+      </div>
+      <div class="btn btn-secondary bsc-tooltip">Right large tooltip
+        <div class="bsc-tooltip-content secondary right large">
+          <div class="row">
+            <div class="col-5">Build Job:</div>
+            <div class="col-7">my-app (815)</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Build Type:</div>
+            <div class="col-7">Production</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Version:</div>
+            <div class="col-7">v.2.4.3</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Branch:</div>
+            <div class="col-7">master</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Build Time:</div>
+            <div class="col-7">2023-09-24 15:06</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Duration:</div>
+            <div class="col-7">00:12:45</div>
+          </div>
+        </div>
+      </div>
+      <div class="btn btn-success bsc-tooltip">Bottom large tooltip
+        <div class="bsc-tooltip-content success bottom large">
+          <div class="row">
+            <div class="col-5">Build Job:</div>
+            <div class="col-7">my-app (815)</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Build Type:</div>
+            <div class="col-7">Production</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Version:</div>
+            <div class="col-7">v.2.4.3</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Branch:</div>
+            <div class="col-7">master</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Build Time:</div>
+            <div class="col-7">2023-09-24 15:06</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Duration:</div>
+            <div class="col-7">00:12:45</div>
+          </div>
+        </div>
+      </div>
+      <div class="btn btn-warning bsc-tooltip">Left large tooltip
+        <div class="bsc-tooltip-content warning left large">
+          <div class="row">
+            <div class="col-5">Build Job:</div>
+            <div class="col-7">cpm-server (518)</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Build Type:</div>
+            <div class="col-7"></div>
+          </div>
+          <div class="row">
+            <div class="col-5">Version:</div>
+            <div class="col-7">V7.3</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Branch:</div>
+            <div class="col-7"></div>
+          </div>
+          <div class="row">
+            <div class="col-5">Build Time:</div>
+            <div class="col-7">2023-09-22 12:59</div>
+          </div>
+          <div class="row">
+            <div class="col-5">Duration:</div>
+            <div class="col-7">00:10:00</div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <h6>Extr Large Size</h6>
+      <div class="btn btn-danger bsc-tooltip m-2">Top xlarge tooltip
+        <div class="bsc-tooltip-content danger top xlarge">
+          <p><img src="img/duelmen.jpg" style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a twon in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
+        </div>
+      </div>
+      <div class="btn btn-dark bsc-tooltip m-2">Right xlarge tooltip
+        <div class="bsc-tooltip-content dark right xlarge">
+          <p><img src="img/duelmen.jpg" style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a twon in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
+        </div>
+      </div>
+      <div class="btn btn-info bsc-tooltip m-2">Bottom xlarge tooltip
+        <div class="bsc-tooltip-content info bottom xlarge">
+          <p><img src="img/duelmen.jpg" style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a twon in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
+        </div>
+      </div>
+      <div class="btn btn-light bsc-tooltip m-2">Left xlarge tooltip
+        <div class="bsc-tooltip-content light left xlarge">
+          <p><img src="img/duelmen.jpg" style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a twon in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
+        </div>
+      </div>
+      <div class="btn btn-primary bsc-tooltip m-2">Top xlarge tooltip
+        <div class="bsc-tooltip-content primary top xlarge">
+          <p><img src="img/duelmen.jpg" style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a twon in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
+        </div>
+      </div>
+      <div class="btn btn-secondary bsc-tooltip m-2">Right xlarge tooltip
+        <div class="bsc-tooltip-content secondary right xlarge">
+          <p><img src="img/duelmen.jpg" style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a twon in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
+        </div>
+      </div>
+      <div class="btn btn-success bsc-tooltip m-2">Bottom xlarge tooltip
+        <div class="bsc-tooltip-content success bottom xlarge">
+          <p><img src="img/duelmen.jpg" style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a twon in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
+        </div>
+      </div>
+      <div class="btn btn-warning bsc-tooltip m-2">Left xlarge tooltip
+        <div class="bsc-tooltip-content warning left xlarge">
+          <p><img src="img/duelmen.jpg" style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a twon in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
+        </div>
+      </div>
+    </div>
+    <!--end::Card Body-->
+  </div>
+  <!--end::Card-->
+</div>
+<!--begin::Script-->
+<Scripts path={path}/>
+<!--end::Script-->
+</body>
+<!--end::Body-->
+</html>
