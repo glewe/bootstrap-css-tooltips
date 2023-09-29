@@ -1,4 +1,5 @@
 @import "timestamp";
+
 /*!
  * Bootstrap CSS Tooltips
  * Version: #{$version}
@@ -39,19 +40,19 @@ $width-xlarge: 400px !default;
  */
 .bsc-tooltip .bsc-tooltip-content {
   position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  background-color: #{$dark};
-  color: #fff;
-  padding: 8px;
-  border-radius: 4px;
-  font-size: 14px;
   z-index: 10001;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  transform: translateY(-10px);
   min-width: $width-small;
+  padding: 8px;
+  font-size: 14px;
+  color: #fff;
   text-align: left;
-  filter: drop-shadow(0px 5px 5px #{$dark});
+  visibility: hidden;
+  background-color: #{$dark};
+  filter: drop-shadow(0 5px 5px #{$dark});
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity .3s ease, transform .3s ease;
+  transform: translateY(-10px);
 }
 
 /* Adjust size to small */
@@ -78,94 +79,94 @@ $width-xlarge: 400px !default;
  * Tooltip placement - top
  */
 .bsc-tooltip:hover .bsc-tooltip-content.top {
+  bottom: calc(100% + 8px);
+  left: 0;
+  margin-left: 0;
   visibility: visible;
   opacity: 1;
   transform: translateY(-8px);
-  bottom: calc(100% + 8px);
-  left: 0;
   transform-origin: center top;
-  margin-left: 0;
 }
 
 /* ----------------------------------------------------------------------------
  * Tooltip placement - right
  */
 .bsc-tooltip:hover .bsc-tooltip-content.right {
+  top: 0;
+  left: calc(100% + 8px);
+  margin-top: 0;
   visibility: visible;
   opacity: 1;
   transform: translateX(8px);
-  top: 0;
-  left: calc(100% + 8px);
   transform-origin: left center;
-  margin-top: 0;
 }
 
 /* ----------------------------------------------------------------------------
  * Tooltip placement - bottom
  */
 .bsc-tooltip:hover .bsc-tooltip-content.bottom {
+  top: calc(100% + 8px);
+  left: 0;
+  margin-left: 0;
   visibility: visible;
   opacity: 1;
   transform: translateY(8px);
-  top: calc(100% + 8px);
-  left: 0;
   transform-origin: center bottom;
-  margin-left: 0;
 }
 
 /* ----------------------------------------------------------------------------
  * Tooltip placement - left
  */
 .bsc-tooltip:hover .bsc-tooltip-content.left {
+  top: 0;
+  right: calc(100% + 8px);
+  margin-top: 0;
   visibility: visible;
   opacity: 1;
   transform: translateX(-8px);
-  top: 0;
-  right: calc(100% + 8px);
   transform-origin: right center;
-  margin-top: 0;
 }
 
 /* ----------------------------------------------------------------------------
  * Tooltip arrow
  */
-.bsc-tooltip:hover .bsc-tooltip-content:before {
-  content: "";
+.bsc-tooltip:hover .bsc-tooltip-content::before {
   position: absolute;
   width: 0;
   height: 0;
+  content: "";
   border-style: solid;
 }
 
-.bsc-tooltip:hover .bsc-tooltip-content.top:before {
-  border-width: 6px 6px 0 6px;
-  border-color: #{$dark} transparent transparent transparent;
+.bsc-tooltip:hover .bsc-tooltip-content.top::before {
   bottom: -5px;
   left: 20px;
+  border-color: #{$dark} transparent transparent transparent;
+  border-width: 6px 6px 0;
   transform: translateX(-50%);
 }
 
-.bsc-tooltip:hover .bsc-tooltip-content.right:before {
-  border-width: 6px 6px 6px 0;
-  border-color: transparent #{$dark} transparent transparent;
+.bsc-tooltip:hover .bsc-tooltip-content.right::before {
   top: 20px;
   left: -5px;
+  border-color: transparent #{$dark} transparent transparent;
+  border-width: 6px 6px 6px 0;
   transform: translateY(-50%);
 }
 
-.bsc-tooltip:hover .bsc-tooltip-content.bottom:before {
-  border-width: 0 6px 6px 6px;
-  border-color: transparent transparent #{$dark} transparent;
+.bsc-tooltip:hover .bsc-tooltip-content.bottom::before {
   top: -5px;
   left: 20px;
+  border-color: transparent transparent #{$dark} transparent;
+  border-width: 0 6px 6px;
   transform: translateX(-50%);
 }
 
-.bsc-tooltip:hover .bsc-tooltip-content.left:before {
-  border-width: 6px 0 6px 6px;
-  border-color: transparent transparent transparent #{$dark};
+.bsc-tooltip:hover .bsc-tooltip-content.left::before {
   top: 20px;
   right: -5px;
+  border-color: transparent transparent transparent #{$dark};
+  border-width: 6px 0 6px 6px;
   transform: translateY(-50%);
 }
 
