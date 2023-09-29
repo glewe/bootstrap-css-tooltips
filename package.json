@@ -23,9 +23,9 @@
     "docs-format": "js-beautify --editorconfig --file \"dist/*.html\"",
     "assets": "node src/config/assets.config.mjs",
     "scss": "node src/config/scss.config.mjs",
-    "lint": "npm-run-all --aggregate-output --continue-on-error --parallel css-lint lockfile-lint",
+    "lint": "npm-run-all --aggregate-output --continue-on-error --parallel js-lint css-lint lockfile-lint",
     "compile": "npm-run-all docs-format scss assets html css js",
-    "prod": "npm-run-all compile"
+    "prod": "npm-run-all lint compile"
   },
   "keywords": [
     "css",
