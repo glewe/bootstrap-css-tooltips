@@ -3,6 +3,7 @@ import mdx from '@astrojs/mdx'
 
 // https://astro.build/config
 export default defineConfig({
+  myenv: 'My Astro Site',
   build: {
     // Example: Generate `page.html` instead of `page/index.html` during build.
     format: 'file'
@@ -14,6 +15,8 @@ export default defineConfig({
   },
   integrations: [mdx()],
   srcDir: './src/html',
-  cacheDir: './dist/pages',
-  outDir: './dist'
+  cacheDir: './dist',
+  outDir: './dist',
 })
+
+export const env = 'development';

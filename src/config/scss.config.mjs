@@ -20,7 +20,7 @@ lastCompile =
 //
 console.log('-------------------------------------------------------------------------------\nCreating _timestamp.scss...\n')
 try {
-  fs.writeFile('./src/scss/_timestamp.scss', "$version: \"" + version + "\";\n" + '$timestamp: "' + lastCompile + '";\n' + '$year: "' + year + '";')
+  fs.writeFile('./src/scss/_timestamp.scss', "$version: \"" + version + "\" !default;\n" + '$timestamp: "' + lastCompile + '" !default;\n' + '$year: "' + year + '" !default;\n')
   console.log('...done!\n-------------------------------------------------------------------------------')
 } catch (error) {
   console.error(error + '\n-------------------------------------------------------------------------------')

@@ -1,26 +1,33 @@
 ---
 import Head from "@components/_head.astro";
 import Scripts from "@components/_scripts.astro";
+import { env } from "../../config/astro.config.mjs"
 
 const title = "Bootstrap CSS Tooltips";
-const path = "../../dist";
+var path = "../dist/";
+if (env === 'production') {
+  path = "";
+}
 ---
 
 <!DOCTYPE html>
 <html lang="en">
+
 <!--begin::Head-->
 <head>
   <Head title={title} path={path}/>
 </head>
 <!--end::Head-->
+
 <!--begin::Body-->
 <body>
+<!--begin::Content-->
 <div class="content m-4">
   <!--begin::Card-->
   <div class="card card-primary card-outline mb-4">
     <!--begin::Card Header-->
     <div class="card-header">
-      <h5 class="card-title">Bootstrap CSS Tooltips</h5>
+      <h5 class="card-title">{env} Bootstrap CSS Tooltips</h5>
       <p>Bootstrap CSS tooltips are based on CSS only. No Javascript is needed. Hover over the buttons below to see examples.</p>
       <p>View on <a href="https://github.com/glewe/bootstrap-css-tooltips" target="_blank">GitHub</a></p>
     </div>
@@ -46,10 +53,10 @@ const path = "../../dist";
       <div class="btn btn-secondary bsc-tooltip m-2">Right small tooltip
         <span class="bsc-tooltip-content secondary right">Tooltip Text</span>
       </div>
-      <div class="btn btn-success bsc-tooltip">Bottom small tooltip
+      <div class="btn btn-success bsc-tooltip m-2">Bottom small tooltip
         <span class="bsc-tooltip-content success bottom">Tooltip Text</span>
       </div>
-      <div class="btn btn-warning bsc-tooltip">Left small tooltip
+      <div class="btn btn-warning bsc-tooltip m-2">Left small tooltip
         <span class="bsc-tooltip-content warning left">Tooltip Text</span>
       </div>
       <hr>
@@ -57,25 +64,25 @@ const path = "../../dist";
       <div class="btn btn-danger bsc-tooltip m-2">Top medium tooltip
         <span class="bsc-tooltip-content danger top medium">Bootstrap 5 is increasingly making use of custom properties as local variables for various components.</span>
       </div>
-      <div class="btn btn-dark bsc-tooltip">Right medium tooltip
+      <div class="btn btn-dark bsc-tooltip m-2">Right medium tooltip
         <span class="bsc-tooltip-content dark right medium">Bootstrap 5 is increasingly making use of custom properties as local variables for various components.</span>
       </div>
-      <div class="btn btn-info bsc-tooltip">Bottom medium tooltip
+      <div class="btn btn-info bsc-tooltip m-2">Bottom medium tooltip
         <span class="bsc-tooltip-content info bottom medium">Bootstrap 5 is increasingly making use of custom properties as local variables for various components.</span>
       </div>
-      <div class="btn btn-light bsc-tooltip">Left medium tooltip
+      <div class="btn btn-light bsc-tooltip m-2">Left medium tooltip
         <span class="bsc-tooltip-content light left medium">Bootstrap 5 is increasingly making use of custom properties as local variables for various components.</span>
       </div>
-      <div class="btn btn-primary bsc-tooltip">Top medium tooltip
+      <div class="btn btn-primary bsc-tooltip m-2">Top medium tooltip
         <span class="bsc-tooltip-content primary top medium">Bootstrap 5 is increasingly making use of custom properties as local variables for various components.</span>
       </div>
-      <div class="btn btn-secondary bsc-tooltip">Right medium tooltip
+      <div class="btn btn-secondary bsc-tooltip m-2">Right medium tooltip
         <span class="bsc-tooltip-content secondary right medium">Bootstrap 5 is increasingly making use of custom properties as local variables for various components.</span>
       </div>
-      <div class="btn btn-success bsc-tooltip">Bottom medium tooltip
+      <div class="btn btn-success bsc-tooltip m-2">Bottom medium tooltip
         <span class="bsc-tooltip-content success bottom medium">Bootstrap 5 is increasingly making use of custom properties as local variables for various components.</span>
       </div>
-      <div class="btn btn-warning bsc-tooltip">Left medium tooltip
+      <div class="btn btn-warning bsc-tooltip m-2">Left medium tooltip
         <span class="bsc-tooltip-content warning left medium">Bootstrap 5 is increasingly making use of custom properties as local variables for various components.</span>
       </div>
       <hr>
@@ -108,7 +115,7 @@ const path = "../../dist";
           </div>
         </div>
       </div>
-      <div class="btn btn-dark bsc-tooltip">Right large tooltip
+      <div class="btn btn-dark bsc-tooltip m-2">Right large tooltip
         <div class="bsc-tooltip-content dark right large">
           <div class="row">
             <div class="col-5">Build Job:</div>
@@ -136,7 +143,7 @@ const path = "../../dist";
           </div>
         </div>
       </div>
-      <div class="btn btn-info bsc-tooltip">Bottom large tooltip
+      <div class="btn btn-info bsc-tooltip m-2">Bottom large tooltip
         <div class="bsc-tooltip-content info bottom large">
           <div class="row">
             <div class="col-5">Build Job:</div>
@@ -164,7 +171,7 @@ const path = "../../dist";
           </div>
         </div>
       </div>
-      <div class="btn btn-light bsc-tooltip">Left large tooltip
+      <div class="btn btn-light bsc-tooltip m-2">Left large tooltip
         <div class="bsc-tooltip-content light left large">
           <div class="row">
             <div class="col-5">Build Job:</div>
@@ -192,7 +199,7 @@ const path = "../../dist";
           </div>
         </div>
       </div>
-      <div class="btn btn-primary bsc-tooltip">Top large tooltip
+      <div class="btn btn-primary bsc-tooltip m-2">Top large tooltip
         <div class="bsc-tooltip-content primary top large">
           <div class="row">
             <div class="col-5">Build Job:</div>
@@ -220,7 +227,7 @@ const path = "../../dist";
           </div>
         </div>
       </div>
-      <div class="btn btn-secondary bsc-tooltip">Right large tooltip
+      <div class="btn btn-secondary bsc-tooltip m-2">Right large tooltip
         <div class="bsc-tooltip-content secondary right large">
           <div class="row">
             <div class="col-5">Build Job:</div>
@@ -248,7 +255,7 @@ const path = "../../dist";
           </div>
         </div>
       </div>
-      <div class="btn btn-success bsc-tooltip">Bottom large tooltip
+      <div class="btn btn-success bsc-tooltip m-2">Bottom large tooltip
         <div class="bsc-tooltip-content success bottom large">
           <div class="row">
             <div class="col-5">Build Job:</div>
@@ -276,7 +283,7 @@ const path = "../../dist";
           </div>
         </div>
       </div>
-      <div class="btn btn-warning bsc-tooltip">Left large tooltip
+      <div class="btn btn-warning bsc-tooltip m-2">Left large tooltip
         <div class="bsc-tooltip-content warning left large">
           <div class="row">
             <div class="col-5">Build Job:</div>
@@ -308,42 +315,42 @@ const path = "../../dist";
       <h6>Extr Large Size</h6>
       <div class="btn btn-danger bsc-tooltip m-2">Top xlarge tooltip
         <div class="bsc-tooltip-content danger top xlarge">
-          <p><img src="img/duelmen.jpg" style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a twon in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
+          <p><img src={path + "img/duelmen.jpg"} style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a town in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
         </div>
       </div>
       <div class="btn btn-dark bsc-tooltip m-2">Right xlarge tooltip
         <div class="bsc-tooltip-content dark right xlarge">
-          <p><img src="img/duelmen.jpg" style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a twon in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
+          <p><img src={path + "img/duelmen.jpg"} style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a town in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
         </div>
       </div>
       <div class="btn btn-info bsc-tooltip m-2">Bottom xlarge tooltip
         <div class="bsc-tooltip-content info bottom xlarge">
-          <p><img src="img/duelmen.jpg" style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a twon in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
+          <p><img src={path + "img/duelmen.jpg"} style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a town in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
         </div>
       </div>
       <div class="btn btn-light bsc-tooltip m-2">Left xlarge tooltip
         <div class="bsc-tooltip-content light left xlarge">
-          <p><img src="img/duelmen.jpg" style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a twon in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
+          <p><img src={path + "img/duelmen.jpg"} style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a town in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
         </div>
       </div>
       <div class="btn btn-primary bsc-tooltip m-2">Top xlarge tooltip
         <div class="bsc-tooltip-content primary top xlarge">
-          <p><img src="img/duelmen.jpg" style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a twon in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
+          <p><img src={path + "img/duelmen.jpg"} style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a town in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
         </div>
       </div>
       <div class="btn btn-secondary bsc-tooltip m-2">Right xlarge tooltip
         <div class="bsc-tooltip-content secondary right xlarge">
-          <p><img src="img/duelmen.jpg" style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a twon in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
+          <p><img src={path + "img/duelmen.jpg"} style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a town in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
         </div>
       </div>
       <div class="btn btn-success bsc-tooltip m-2">Bottom xlarge tooltip
         <div class="bsc-tooltip-content success bottom xlarge">
-          <p><img src="img/duelmen.jpg" style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a twon in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
+          <p><img src={path + "img/duelmen.jpg"} style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a town in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
         </div>
       </div>
       <div class="btn btn-warning bsc-tooltip m-2">Left xlarge tooltip
         <div class="bsc-tooltip-content warning left xlarge">
-          <p><img src="img/duelmen.jpg" style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a twon in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
+          <p><img src={path + "img/duelmen.jpg"} style="float: left; margin-right: 8px; width: 100px;" alt="">Dülmen is a town in Germany. It is situated in the south part of the Münsterland area, between the Lippe river to the south, the Baumberge hills to the north and the Ems river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a traditional cole mining area.</p>
         </div>
       </div>
     </div>
@@ -351,6 +358,7 @@ const path = "../../dist";
   </div>
   <!--end::Card-->
 </div>
+<!--end::Content-->
 <!--begin::Script-->
 <Scripts path={path}/>
 <!--end::Script-->

@@ -2,3 +2,4 @@
 /**
  * bsc-tooltips.ts
  */
+const dummy = 'dummy'
