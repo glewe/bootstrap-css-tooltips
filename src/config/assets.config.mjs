@@ -1,9 +1,13 @@
 import fs from 'fs-extra'
+import consoleStamp from 'console-stamp';
 
-console.log('-------------------------------------------------------------------------------\nCopying asset files...\n')
+consoleStamp(console, {format: ':date("yyyy-mm-dd HH:MM:ss").white.bgBlue'});
+let action = 'Copying Astro public files'
+
+console.log('Begin::' + action)
 try {
   fs.copySync('./src/assets/img', './dist/img')
-  console.log('...done!\n-------------------------------------------------------------------------------')
+  console.log('End::' + action)
 } catch (error) {
-  console.error(error + '\n-------------------------------------------------------------------------------')
+  console.log('Error::Copying asset files\n' + error + '\n-------------------------------------------------------------------------------')
 }

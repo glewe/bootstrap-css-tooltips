@@ -1,22 +1,3 @@
-# build output
-dist/
-
-# generated types
-.astro/
-
-# unwanted types
-**/env.d.ts
-
-# System / Log files
-*.DS_Store
-*.log
-
-# Archives
-*.zip
-
-# Sass Cache
-.sass-cache
-
 # Project files
 .idea
 nbproject
@@ -24,20 +5,31 @@ nbproject/private
 .vscode/
 .vs/
 
-# Node / Bower
-node_modules/
-bower_components/
+# unwanted types
+**/env.d.ts
 
-# Docs
-/docs/_site/
-/docs/vendor/
-/docs/.bundle/
-/docs_html/
-.jekyll-cache/
-.jekyll-metadata
-
-# ETC
-TODO
-test.html
-ad.js
+# System / Log files
+*.DS_Store
+*.log
 /.cache/
+
+# build output
+dist/
+
+# generated types
+.astro/
+public/css/
+public/js/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment variables
+.env
+.env.production

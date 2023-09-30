@@ -1,6 +1,12 @@
 import fs from 'fs-extra'
-const version = process.env.npm_package_version;
+import pkg from '../../package.json' assert { type: "json" };
+import consoleStamp from 'console-stamp';
+
+const version = pkg.version;
 const year = new Date().getFullYear()
+
+consoleStamp(console, {format: ':date("yyyy-mm-dd HH:MM:ss").white.bgBlue'});
+let action = 'Creating _timestamp.scss'
 
 var lastCompile = new Date();
 //
@@ -18,10 +24,11 @@ lastCompile =
 //
 // Create timestamp file to import in .scss files
 //
-console.log('-------------------------------------------------------------------------------\nCreating _timestamp.scss...\n')
+console.log('Begin::' + action)
 try {
-  fs.writeFile('./src/scss/_timestamp.scss', "$version: \"" + version + "\";\n" + '$timestamp: "' + lastCompile + '";\n' + '$year: "' + year + '";')
-  console.log('...done!\n-------------------------------------------------------------------------------')
+  fs.writeFile('./src/scss/_timestamp.scss', "$version: \"" + version + "\" !default;\n" + '$timestamp: "' + lastCompile + '" !default;\n' + '$year: "' + year + '" !default;\n')
+  console.log('End::' + action)
 } catch (error) {
-  console.error(error + '\n-------------------------------------------------------------------------------')
+  consoleStamp(console, {format: ':date("yyyy-mm-dd HH:MM:ss").white.bgRed'});
+  console.log('Error::' + action + '\n' + error + '\n-------------------------------------------------------------------------------')
 }
