@@ -1,5 +1,5 @@
-import FullScreen from './fullscreen'
+import Dummy from './dummy'
 
 export {
-  FullScreen
+  Dummy
 }

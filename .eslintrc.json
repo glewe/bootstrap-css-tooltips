@@ -99,7 +99,10 @@
         "@typescript-eslint/semi": [
           "error",
           "never"
-        ]
+        ],
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-extraneous-class": "off",
+        "@typescript-eslint/no-useless-constructor": "off"
       }
     },
     {
