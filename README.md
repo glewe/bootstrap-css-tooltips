@@ -132,10 +132,16 @@ npm install
 
 Edit the `src/html/index.html` and `src/scss/bs-tooltips.scss` file to your liking.
 
-Compile the result of your changes by running:
+Chcek your changes locally by running:
 
 ```
-npm run compile
+npm run dev
+```
+
+Build the result of your changes by running:
+
+```
+npm run build
 ```
 
 The distribution files will be created in the `dist` folder. Launch the `index.html` in there and review your changes.

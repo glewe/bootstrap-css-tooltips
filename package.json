@@ -2,7 +2,7 @@
   "title": "Bootstrap CSS Tooltips",
   "name": "bootstrap-css-tooltips",
   "description": "Bootstrap CSS tooltips are based on CSS only and support HTML content and Bootstrap colors.",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "license": "MIT <https://github.com/glewe/bootstrap-css-tooltips/blob/master/LICENSE>",
   "author": "George Lewe",
   "homepage": "https://lewe.com",
