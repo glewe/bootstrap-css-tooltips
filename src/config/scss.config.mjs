@@ -6,7 +6,7 @@ const version = pkg.version;
 const year = new Date().getFullYear()
 
 consoleStamp(console, {format: ':date("yyyy-mm-dd HH:MM:ss").white.bgBlue'});
-let action = 'Creating _timestamp.scss'
+const action = 'Creating _timestamp.scss'
 
 var lastCompile = new Date();
 //

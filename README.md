@@ -3,6 +3,7 @@
 [![Bootstrap 5](https://img.shields.io/badge/Bootstrap%205-7952b3.svg)](https://www.getbootstrap.com/)
 [![SCSS](https://img.shields.io/badge/SCSS-c46c98.svg)](https://sass-lang.com/)
 [![Node.js](https://img.shields.io/badge/Node.js-6eaa51.svg)](https://nodejs.org/en/)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=glewe_bootstrap-css-tooltips&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=glewe_bootstrap-css-tooltips)
 
 **Bootstrap CSS Tooltips** offers a CSS only tooltip solution supporting Bootstrap colors and HTML content.
 
