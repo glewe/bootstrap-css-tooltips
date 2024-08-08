@@ -1,5 +1,5 @@
 import fs from 'fs-extra'
-import pkg from '../../package.json' assert { type: "json" };
+import pkg from '../../package.json' with { type: "json" };
 import consoleStamp from 'console-stamp';
 
 const version = pkg.version;
