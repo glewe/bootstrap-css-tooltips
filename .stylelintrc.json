@@ -6,8 +6,9 @@
   "reportNeedlessDisables": true,
   "overrides": [
     {
-      "files": ["**/*.scss"],
+      "files": ["**/*.css"],
       "rules": {
+        "color-named": "never",
         "declaration-no-important": null,
         "declaration-property-value-disallowed-list": {
           "border": "none",
@@ -20,13 +21,6 @@
         "keyframes-name-pattern": null,
         "property-disallowed-list": [
         ],
-        "scss/dollar-variable-default": [
-          true,
-          {
-            "ignore": "local"
-          }
-        ],
-        "scss/selector-no-union-class-name": true,
         "selector-max-class": null,
         "selector-max-combinators": null,
         "selector-max-compound-selectors": null,

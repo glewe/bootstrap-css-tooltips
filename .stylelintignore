@@ -6,3 +6,4 @@
 **/docs_html/
 **/plugins/
 **/.cache/
+node_modules/

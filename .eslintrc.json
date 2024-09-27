@@ -1,13 +1,21 @@
 {
-  "root": true,
+  "env": {
+    "es6": true
+  },
   "extends": [
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:unicorn/recommended",
-    "xo",
-    "xo/browser"
+    "plugin:unicorn/recommended"
   ],
+  "ignorePatterns": ["src/js/adminlte.js", "src/js/matomo.js"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "requireConfigFile": false,
+    "ecmaVersion": "latest"
+  },
+  "root": true,
   "rules": {
+    "@typescript-eslint/ban-ts-comment": "off",
     "arrow-body-style": "off",
     "capitalized-comments": "off",
     "comma-dangle": [
@@ -36,7 +44,7 @@
         "properties": false
       }
     ],
-    "no-console": "error",
+    "no-console": "off",
     "no-negated-condition": "off",
     "object-curly-spacing": [
       "error",
@@ -46,78 +54,41 @@
       "error",
       "after"
     ],
-    "semi": [
-      "error",
-      "never"
+    "quotes": [
+      1,
+      "single",
+      { "avoidEscape": true }
     ],
+    "semi": 0,
     "unicorn/explicit-length-check": "off",
     "unicorn/no-array-callback-reference": "off",
     "unicorn/no-array-for-each": "off",
     "unicorn/no-array-method-this-argument": "off",
+    "unicorn/no-negated-condition": "off",
     "unicorn/no-null": "off",
-    "unicorn/no-unused-properties": "error",
+    "unicorn/no-unused-properties": "off",
+    "unicorn/no-useless-undefined": "off",
+    "unicorn/numeric-separators-style": "off",
+    "unicorn/prefer-add-event-listener": "off",
     "unicorn/prefer-array-flat": "off",
     "unicorn/prefer-dom-node-dataset": "off",
     "unicorn/prefer-export-from": "off",
+    "unicorn/prefer-logical-operator-over-ternary": "off",
     "unicorn/prefer-module": "off",
     "unicorn/prefer-query-selector": "off",
+    "unicorn/prefer-set-has": "off",
     "unicorn/prefer-spread": "off",
     "unicorn/prefer-string-replace-all": "off",
-    "unicorn/prevent-abbreviations": "off"
+    "unicorn/prefer-string-slice": "off",
+    "unicorn/prefer-ternary": "off",
+    "unicorn/prevent-abbreviations": "off",
+    "unicorn/switch-case-braces": "off"
   },
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "extends": [
-        "plugin:import/typescript",
-        "xo-typescript"
-      ],
-      "rules": {
-        "@typescript-eslint/comma-dangle": [
-          "error",
-          "never"
-        ],
-        "@typescript-eslint/indent": [
-          "error",
-          2,
-          {
-            "MemberExpression": "off",
-            "SwitchCase": 1
-          }
-        ],
-        "@typescript-eslint/naming-convention": [
-          "error",
-          {
-            "selector": "variable",
-            "format": ["camelCase", "StrictPascalCase", "UPPER_CASE"]
-          }
-        ],
-        "@typescript-eslint/object-curly-spacing": [
-          "error",
-          "always"
-        ],
-        "@typescript-eslint/semi": [
-          "error",
-          "never"
-        ],
-        "@typescript-eslint/no-empty-function": "off",
-        "@typescript-eslint/no-extraneous-class": "off",
-        "@typescript-eslint/no-useless-constructor": "off"
-      }
-    },
-    {
-      "files": ["src/config/**"],
-      "env": {
-        "browser": false,
-        "node": true
-      },
-      "parserOptions": {
-        "sourceType": "module"
-      },
-      "rules": {
-        "no-console": "off",
-        "unicorn/prefer-top-level-await": "off"
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
-  ]
+  }
 }

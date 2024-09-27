@@ -7,13 +7,13 @@
 
 **Bootstrap CSS Tooltips** offers a CSS only tooltip solution supporting Bootstrap colors and HTML content.
 
-Bootstrap itself comes with basic black tooltips that require Javascript (popper.js) and do not support complex HTML content. 
+Bootstrap itself comes with basic black tooltips that require Javascript (popper.js) and do not support complex HTML content.
 I ran into situations where those didn't work, e.g. when the tooltip content is injected via Javascript after the page is loaded.
 In such cases, CSS based tooltips still work well.
 
 On my search for a CSS based tooltip library I did not find one that fulfilled all my requirements, thus, I wrote this one here to serve my specific use cases.
 
-## My Requirements
+# My Requirements
 
 - no Javascript required
 - support for HTML content
@@ -22,7 +22,7 @@ On my search for a CSS based tooltip library I did not find one that fulfilled a
 
 The downside of not having Javascript create the tooltips is not having the automatic computation of the tooltip size and position based on canvas and hover object position.
 
-To work around this I chose to position the tooltips relatively to the hover object based on pixel distances. For horizontal sizing, this library offers four different widths. They 
+To work around this I chose to position the tooltips relatively to the hover object based on pixel distances. For horizontal sizing, this library offers four different widths. They
 can be easily set by a class name:
 
 - small: 160px
@@ -30,7 +30,7 @@ can be easily set by a class name:
 - large: 320px
 - xlarge: 400px
 
-## Demo
+# Demo
 
 [http://demo.lewe-online.de/bootstrap-css-tooltips/](http://demo.lewe-online.de/bootstrap-css-tooltips/)
 
@@ -38,23 +38,21 @@ or
 
 Download the library here and launch `index.html` from the `dist` folder.
 
-## Usage
+# Usage
 
 The library requires that you use Bootstrap 5 on your site. You need to load the BS5 stylesheet first.
 
-After that, load the stylesheet from this library's `dist/css` folder. 
+After that, load the stylesheet from this library's `dist/css` folder.
 
 For example:
 
 ```html
-<!--begin::Bootstrap Styles-->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<!--end::Bootstrap Styles-->
-<!--begin::Bootstrap CSS Tooltips-->
+<!--Bootstrap Styles-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha256-PI8n5gCcz9cQqQXm3PEtDuPG8qx9oFsFctPg0S5zb8g=" crossorigin="anonymous">
+<!--Bootstrap CSS Tooltips-->
 <link href="css/bsc-tooltips.min.css" rel="stylesheet">
-<!--end::Bootstrap CSS Tooltips-->
 ```
-In your HTML code you need a DOM object that holds the hover object and the tooltip content object. The tooltip content object is intially hidden. 
+In your HTML code you need a DOM object that holds the hover object and the tooltip content object. The tooltip content object is intially hidden.
 
 For example:
 
@@ -104,21 +102,21 @@ An xlarge info tooltip popping up at the bottom containing a left floating image
 <div class="btn btn-info bsc-tooltip m-2">Bottom xlarge tooltip
   <div class="bsc-tooltip-content info bottom xlarge">
     <p>
-      <img 
-        src="duelmen.jpg" 
-        style="float: left; margin-right: 8px; width: 100px;" 
+      <img
+        src="duelmen.jpg"
+        style="float: left; margin-right: 8px; width: 100px;"
         alt=""
       >
-      Dülmen is a twon in Germany. It is situated in the south part of the Münsterland area, 
-      between the Lippe river to the south, the Baumberge hills to the north and the Ems 
-      river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a 
+      Dülmen is a twon in Germany. It is situated in the south part of the Münsterland area,
+      between the Lippe river to the south, the Baumberge hills to the north and the Ems
+      river to the east. The so-called Ruhrgebiet is located south of Dülmen, once a
       traditional cole mining area.
     </p>
   </div>
 </div>
 
 ```
-## Customization
+# Customization
 
 If you want to make changes to the library, clone the repo like so:
 
@@ -133,12 +131,6 @@ npm install
 
 Edit the `src/html/index.html` and `src/scss/bs-tooltips.scss` file to your liking.
 
-Chcek your changes locally by running:
-
-```
-npm run dev
-```
-
 Build the result of your changes by running:
 
 ```
@@ -147,7 +139,16 @@ npm run build
 
 The distribution files will be created in the `dist` folder. Launch the `index.html` in there and review your changes.
 
-## Enjoy
+## Development Watch Mode
+
+You can run a watch mode (using `nodemon --watch` and `browser-sync`) by running:
+
+```
+npm run dev
+```
+Whenever you change files in the `src` folder, the distribution files will be updated and the browser will reload.
+
+# Enjoy
 
 If you have use for this library, feel free to use it anywhere for free.
 
