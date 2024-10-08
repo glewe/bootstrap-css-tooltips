@@ -13,7 +13,7 @@ In such cases, CSS based tooltips still work well.
 
 On my search for a CSS based tooltip library I did not find one that fulfilled all my requirements, thus, I wrote this one here to serve my specific use cases.
 
-# My Requirements
+# Details
 
 - no Javascript required
 - support for HTML content
